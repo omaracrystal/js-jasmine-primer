@@ -28,3 +28,24 @@ describe('Tax Calculator', function(){
   })
 
 });
+
+
+describe('Leap Year', function(){
+
+  it('every year whose number is perfectly divisable by four is a leap year', function() {
+    expect(code.leapYear(2004)).toEqual(true);
+    expect(code.leapYear(2008)).toEqual(true);
+  });
+
+  it('years which are both divisible by 100 and not divisable by 400 are not leap years', function() {
+    expect(code.leapYear(1700)).toEqual(false);
+    expect(code.leapYear(1900)).toEqual(false);
+
+  });
+
+  it('1600 and 200 are leap years', function () {
+    expect(code.leapYear(1600)).toEqual(true);
+    expect(code.leapYear(2000)).toEqual(true);
+  })
+
+});
